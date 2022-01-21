@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="myfatoora_form">
+            <form t-att-action="api_url" method="post">
+            <div>
+                <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+                <input type="hidden" name="InvoiceValue" t-att-value="InvoiceValue"/>
+                <!--                <input type="hidden" name="headers['Authorization']" value="Bearer L_4TV3y9bg4H_LZ08uy125nti3rnm25oKnXB9rkRQ_9u2Q_5l0uQr10aXkQIiL4LZIFa5ZtHCpUyb6VokSPS3iOG4sVVW88G3g3lJM86030pfVSkMsP2kWLUzhfx3z3KtwklQDmhnz64OJXcztBrQY5lnsitvKU4_Wjb8hBI6fwoshcvuuioItURjAl7GhIv6Op7TWNsOwvnHiMfqJErOmkaE3GsvWsCuIWYSlPs3FSlW8xTTD2eUjmHDObtwn8tbqnK1uULVXvehFeH2JKm7ISowl2ZW4msxuYRoqBNIlcuPvMXAZ79jxtE"/>-->
+                <input type="hidden" name="CustomerName" t-att-value="CustomerName"/>
+                <input type="hidden" name="PaymentMethodId" t-att-value="PaymentMethodId"/>
+                <input type="hidden" name="CustomerBlock" t-att-value="CustomerBlock"/>
+                <input type="hidden" name="CustomerStreet" t-att-value="CustomerStreet"/>
+                <input type="hidden" name="CustomerHouseBuildingNo" t-att-value="CustomerHouseBuildingNo"/>
+                <input type="hidden" name="CustomerCivilId" t-att-value="CustomerCivilId"/>
+                <input type="hidden" name="CustomerAddress" t-att-value="CustomerAddress"/>
+                <input type="hidden" name="CustomerReference" t-att-value="CustomerReference"/>
+                <input type="hidden" name="CountryCodeId" t-att-value="CountryCodeId"/>
+                <input type="hidden" name="CustomerMobile" t-att-value="CustomerMobile"/>
+                <input type="hidden" name="CustomerEmail" t-att-value="CustomerEmail"/>
+                <input type="hidden" name="DisplayCurrencyId" t-att-value="DisplayCurrencyId"/>
+                <input type="hidden" name="SendInvoiceOption" t-att-value="SendInvoiceOption"/>
+                <input type="hidden" name="InvoiceItemsCreate" t-att-value="InvoiceItemsCreate"/>
+                <input type="hidden" name="CallBackUrl" t-att-value="CallBackUrl"/>
+                <input type="hidden" name="ErrorUrl" t-att-value="ErrorUrl"/>
+                <input type="hidden" name="Language" t-att-value="Language"/>
+                <input type="hidden" name="SourceInfo" t-att-value="SourceInfo"/>
+                <input type="hidden" name="Environment" t-att-value="Environment"/>
+            </div>
+            </form>
+        </template>
+    </data>
+    <!--    <data>
+            <template id="myfatoora_card">
+                <html>
+                <style>
+                    body {
+                    margin: 0;
+                    padding: 0;
+                    font-family: verdana
+                    }
+
+                    header {
+                    text-align: center;
+                    padding: 10px 0
+                    }
+
+                    .hidden {
+                    display: none !important;
+                    }
+
+                    .form-group {
+                    margin-bottom: 15px;
+                    }
+
+                    .form-group .col .inputs {
+                    margin-bottom: 0px;
+                    width: 97%;
+                    padding: 1.3rem 1rem;
+                    border: #6fcde0 solid 1px;
+                    /*font-size: 12px;*/
+                    /*padding-top: 1.3rem;
+                    padding-bottom: 1.3rem;*/
+                    /* padding-right: 1rem; */
+                    /* padding-left: 1rem; */
+                    /*padding: 20px 18px;*/
+                    }
+                    .form-group .HolderName .inputs {
+                    margin-bottom: 0px;
+                    /*width: 80%;*/
+                    height: 39px;
+                    width: 95%;
+                    padding: 10px;
+                    border: #6fcde0 solid 1px;
+                    /* font-size: 12px; */
+                    /* padding-right: 1rem; */
+                    /* padding-left: 1rem; */
+                    /* padding: 20px 18px; */
+                    }
+
+                    .form-group .inputs {
+                    width: 90%;
+                    margin-bottom: 0px !important;
+                    }
+
+                    .form-cont {
+                    /*background: #f9f9f9;*/
+                    padding: 20px 0px 50px 0px;
+                    /*box-shadow: 0 0 15px rgba(0,0,0,.08);*/
+                    border-top: #ccc solid 1px;
+                    }
+
+                    .form-cont h4 {
+                    text-align: center;
+                    }
+
+                    .form-cont form {
+                    max-width: 400px; /*800px;*/
+                    margin: 0 auto;
+                    text-align: left; /*center;*/
+                    }
+
+                    .form-cont form .form-flds {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-content: center;
+                    flex-direction: column;
+                    }
+
+                    .form-cont form .inputs {
+                    /*width: 44.8%;*/
+                    width: 100%;
+                    /*padding: 1.3rem 1rem;*/
+                    margin-bottom: 20px;
+                    box-shadow: 0 0 15px rgba(0,0,0,.08);
+                    border: 0;
+                    border-radius: 4px;
+                    letter-spacing: 1px !important;
+                    font-family: 'Tomorrow', sans-serif !important;
+                    }
+
+                    .form-control {
+                    /*display: block;
+                    width: 100%;*/
+                    height: 60px;
+                    /*padding: 6px 12px;
+                    font-size: 14px;
+                    line-height: 1.42857143;*/
+                    letter-spacing: 1px !important;
+                    font-family: 'Tomorrow', sans-serif !important;
+                    padding-left: 15px;
+                    }
+
+                    .form-cont form input.btn {
+                    width: 100% /*48%*/;
+                    padding: 23px 0;
+                    background: #66afe9 !important;
+                    background-color: #66afe9 !important;
+                    border: 0;
+                    border-radius: 4px;
+                    box-shadow: 0 0 15px rgba(0,0,0,.08);
+                    color: #fff;
+                    font-weight: 600;
+                    cursor: pointer;
+                    }
+
+                    #mpgs-form {
+                    animation: cssAnimation 0s 2s forwards;
+                    opacity: 0;
+                    }
+
+                    .virifed-group {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    padding: 15px;
+                    }
+                    .virifed-group img {
+                    width:60px;
+                    height: 39px;
+                    padding: 15px;
+                    }
+                    .vendorName {
+                    font-weight: normal;
+                    font-size: 1em;
+                    letter-spacing: .2em;
+                    line-height: 1.1em;
+                    margin: 0px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    padding-top: 10px;
+                    }
+                    @keyframes cssAnimation {
+                    to {
+                    opacity: 1;
+                    }
+                    }
+
+                    #loader {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    z-index: 1;
+                    width: 100px;
+                    height: 100px;
+                    margin: -115px 0 0 -75px;
+                    border: 16px solid #f3f3f3;
+                    border-radius: 50%;
+                    border-top: 16px solid #66afe9;
+                    width: 70px;
+                    height: 70px;
+                    -webkit-animation: spin 2s linear forwards;
+                    animation: spin 2s linear forwards;
+                    }
+                    /* Safari */
+                    @-webkit-keyframes spin {
+                    0% {
+                    -webkit-transform: rotate(0deg);
+                    }
+
+                    100% {
+                    -webkit-transform: rotate(360deg);
+                    display: none;
+                    visibility: hidden;
+                    }
+                    }
+
+                    @keyframes spin {
+                    0% {
+                    transform: rotate(0deg);
+                    }
+
+                    100% {
+                    transform: rotate(360deg);
+                    display: none;
+                    visibility: hidden;
+                    }
+                    }
+
+
+                    .form-cont form .inputs:focus, input:focus,
+                    .form-cont form .inputs:focus, input:focus {
+                    outline: none;
+                    border: 0px solid #66afe9;
+                    border: #6fcde0 solid 1px;
+                    }
+
+                    .focus-div {
+                    display: flex;
+                    flex-direction: column;
+                    border: #6fcde0 solid 1px;
+                    border-radius: 4px;
+                    }
+
+                    .focus-div:focus {
+                    outline: none;
+                    border: 0px solid #66afe9;
+                    }
+
+                    .form-cont form .inputs.visa,
+                    .form-cont form .inputs.cvv {
+                    focus, input:focus background-image: url('/payment_myfatoora/static/src/img/visa.png');
+                    background-repeat: no-repeat;
+                    background-position: center right 16px;
+                    padding-left: 15px;
+                    }
+
+                    .visa {
+                    max-width: 62px;
+                    margin-top: -58px;
+                    margin-left: auto;
+                    padding: 10px;
+                    /*position: absolute;
+                    margin: 11px 30px 11px 320px;*/
+                    animation: cssAnimation 0s 2s forwards;
+                    opacity: 0;
+                    }
+
+                    .cvv {
+                    max-width: 62px;
+                    margin-top: -53px;
+                    margin-left: auto;
+                    padding: 10px;
+                    /*position: absolute;
+                    margin: 15px 30px 15px 340px;*/
+                    animation: cssAnimation 0s 2s forwards;
+                    opacity: 0;
+                    }
+
+
+                    /*.form-cont form .inputs.cvv {
+                    background-image: url('/payment_myfatoora/static/src/cvv.png');
+                    }*/
+
+
+                    /* The check */
+                    .check-cont {
+                    display: block;
+                    position: relative;
+                    padding-left: 35px;
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                    font-size: 14px;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    text-align: left;
+                    }
+
+                    .check-cont input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                    }
+
+                    .checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 4px;
+                    background-color: #eee;
+                    }
+
+                    .check-cont:hover input ~ .checkmark {
+                    background-color: #ccc;
+                    }
+
+                    .check-cont input:checked ~ .checkmark {
+                    background-color: #2196F3;
+                    }
+
+                    .checkmark:after {
+                    content: "";
+                    position: absolute;
+                    display: none;
+                    }
+
+                    .check-cont input:checked ~ .checkmark:after {
+                    display: block;
+                    }
+
+                    .check-cont .checkmark:after {
+                    left: 9px;
+                    top: 5px;
+                    width: 5px;
+                    height: 10px;
+                    border: solid white;
+                    border-width: 0 3px 3px 0;
+                    -webkit-transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                    transform: rotate(45deg);
+                    }
+
+                    .field-validation-valid {
+                    display: none;
+                    }
+
+                    .text-danger {
+                    color: #a94442;
+                    }
+
+                    .small {
+                    font-size: 75%;
+                    }
+
+                    .form-group div label {
+                    text-align: initial;
+                    padding-top: 5px;
+                    padding-left: 5px;
+                    /*width: 80%;*/
+                    }
+
+                    .field-validation-error {
+                    color: #b94a48;
+                    font-size: 13px;
+                    }
+
+                    .popup {
+                    display: none;
+                    width: 30%;
+                    position: absolute;
+                    margin: -10px 50px 0px 100px;
+                    }
+
+                    .cvv:hover + .popup {
+                    width: 30%;
+                    position: absolute;
+                    display: inline-block;
+                    margin: -10px 50px 0px 100px;
+                    }
+
+                    .logo img {
+                    max-height: 120px;
+                    }
+
+                    @media (max-width: 350px) {
+                    .form-group .col .inputs {
+                    width: 98% !important;
+                    font-size: 11px;
+                    }
+                    }
+
+
+                    /*@media (max-width: 767px) {*/
+                    @media (max-width: 450px) {
+
+                    .form-cont {
+                    padding: 10px 0 40px;
+                    }
+
+                    .form-cont form {
+                    padding: 0 30px;
+                    }
+
+                    .form-cont form .inputs {
+                    /*width: 100%;*/
+                    font-size: 12px;
+                    }
+
+                    .form-cont form input.btn {
+                    width: 100%;
+                    height: 58px;
+                    -webkit-border-radius: 0;
+                    -webkit-appearance: none;
+                    -webkit-appearance: none; /*Safari/Chrome*/
+                    -moz-appearance: none; /*Firefox*/
+                    -ms-appearance: none; /*IE*/
+                    -o-appearance: none; /*Opera*/
+                    appearance: none;
+                    }
+                    .form-group .HolderName .inputs {
+                    width: 93%;
+                    }
+
+                    .form-group .col .inputs {
+                    width: 98%;
+                    font-size: 11px;
+                    }
+
+                    .form-control {
+                    width: 75%;
+                    }
+                    /*.visa {
+                    margin: 11px 30px 11px calc(63%);
+                    }
+
+                    .cvv {
+                    margin: 15px 30px 15px calc(70%);
+                    }*/
+                    .logo img {
+                    max-height: 120px;
+                    }
+                    }
+
+                    @media (max-width: 350px) {
+
+                    .form-group .col .inputs {
+                    width: 72%;
+                    font-size: 10px;
+                    }
+
+                    .form-control {
+                    width: 72%;
+                    }
+                    /*.visa {
+                    margin: 11px 30px 11px calc(70%);
+                    }
+
+                    .cvv {
+                    margin: 15px 30px 15px calc(80%);
+                    }*/
+                    .logo img {
+                    max-height: 70px;
+                    }
+                    }
+
+                    @media (max-width: 250px) {
+                    .logo img {
+                    max-height: 50px;
+                    }
+
+                    .form-group .col .inputs {
+                    width: 50%;
+                    font-size: 10px;
+                    }
+
+                    .form-control {
+                    width: 72%;
+                    }
+
+                    /*.visa {
+                    margin: 11px 30px 11px calc(63%);
+                    }
+
+                    .cvv {
+                    margin: 15px 30px 15px calc(70%);
+                    }*/
+                    }
+
+                    .img {
+                    vertical-align: middle;
+                    }
+
+                    .invoice-box {
+                    max-width: 800px;
+                    margin: auto;
+                    border: 1px solid #eee;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+                    color: #555;
+                    }
+
+                    .invoice-box td, .invoice-box div {
+                    color: #555;
+                    }
+
+                    .invoice-box table {
+                    width: 100%;
+                    line-height: inherit;
+                    text-align: left;
+                    }
+
+                    .invoice-box table td {
+                    padding: 5px;
+                    vertical-align: top;
+                    }
+
+                    .invoice-box table tr td {
+                    text-align: right;
+                    }
+
+
+                    table tr td.lang {
+                    text-align: left;
+                    }
+
+                    .invoice-box table tr.top {
+                    background-color: #e1f0fa;
+                    }
+
+                    .invoice-box table tr.top table td {
+                    padding-bottom: 20px;
+                    }
+
+
+                    .invoice-box table tr.heading td {
+                    background: #eee;
+                    border-bottom: 1px solid #ddd;
+                    font-weight: bold;
+                    }
+
+
+                    .invoice-box table tr.separator td {
+                    min-height: 20px;
+                    }
+
+                    .invoice-box table tr.item td {
+                    border-bottom: 1px solid #eee;
+                    }
+
+                    .invoice-box table tr.item.last td {
+                    border-bottom: none;
+                    }
+
+                    .invoice-box table tr.total td {
+                    border-top: 2px solid #eee;
+                    font-weight: bold;
+                    }
+
+                    .invoice-box table tr.top table td.profile-td {
+                    text-align: center;
+                    }
+
+                    .vendor-name {
+                    padding: 10px;
+                    text-align: center;
+                    font-size: 32px;
+                    margin: 0;
+                    display: inline-block;
+                    border-radius: 20px;
+                    color: #000;
+                    width: 100%;
+                    }
+
+                    .profile-url {
+                    display: inline-block;
+                    color: #000;
+                    text-align: center;
+                    }
+
+                    a.profile-url:hover {
+                    color: #000 !important;
+                    text-decoration: underline;
+                    }
+
+
+                    .comment {
+                    color: #31708f;
+                    background-color: #d9edf7;
+                    padding: 15px;
+                    box-sizing: border-box;
+                    border: 1px solid #bce8f1;
+                    }
+
+                    .pay-now-container {
+                    text-align: center;
+                    }
+
+                    .pay-now {
+                    display: block;
+                    padding: 10px 16px;
+                    font-size: 20px;
+                    line-height: 1.33;
+                    border-radius: 6px;
+                    color: #fff;
+                    display: inline-block;
+                    margin-bottom: 0;
+                    font-weight: bold;
+                    text-align: center;
+                    white-space: nowrap;
+                    vertical-align: middle;
+                    -ms-touch-action: manipulation;
+                    touch-action: manipulation;
+                    cursor: pointer;
+                    -webkit-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                    background-color: #f0ad4e;
+                    border: 1px solid #eea236;
+                    text-decoration: none;
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                    border-radius: 4px;
+                    width: 100%;
+                    max-width: 350px;
+                    background: -moz-linear-gradient(top, #fdc87d 0%, #f0ad4e 100%); /* FF3.6+ */
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fdc87d),
+                    color-stop(100%,#f0ad4e)); /* Chrome,Safari4+ */
+                    background: -webkit-linear-gradient(top, #fdc87d 0%,#f0ad4e 100%); /* Chrome10+,Safari5.1+ */
+                    background: -o-linear-gradient(top, #fdc87d 0%,#f0ad4e 100%); /* Opera 11.10+ */
+                    background: -ms-linear-gradient(top, #fdc87d 0%,#f0ad4e 100%); /* IE10+ */
+                    background: linear-gradient(top, #fdc87d 0%,#f0ad4e 100%); /* W3C */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fdc87d',
+                    endColorstr='#f0ad4e',GradientType=0 ); /* IE6-9 */
+                    }
+
+                    .pay-now:disabled {
+                    cursor: not-allowed;
+                    opacity: .65;
+                    color: #333;
+                    border-color: #ccc;
+                    background: -moz-linear-gradient(top, #ffffff 0%, #e0e0e0 100%); /* FF3.6+ */
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff),
+                    color-stop(100%,#e0e0e0)); /* Chrome,Safari4+ */
+                    background: -webkit-linear-gradient(top, #ffffff 0%,#e0e0e0 100%); /* Chrome10+,Safari5.1+ */
+                    background: -o-linear-gradient(top, #ffffff 0%,#e0e0e0 100%); /* Opera 11.10+ */
+                    background: -ms-linear-gradient(top, #ffffff 0%,#e0e0e0 100%); /* IE10+ */
+                    background: linear-gradient(top, #ffffff 0%,#e0e0e0 100%); /* W3C */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff',
+                    endColorstr='#e0e0e0',GradientType=0 ); /* IE6-9 */
+                    }
+
+                    .invoice-box table td.padding-table {
+                    padding: 15px;
+                    }
+
+                    .vendor-logo {
+                    display: inline-block;
+                    max-width: 100%;
+                    height: auto;
+                    padding: 4px;
+                    line-height: 1.42857143;
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                    border-radius: 4px;
+                    -webkit-transition: all .2s ease-in-out;
+                    -o-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+                    vertical-align: middle;
+                    width: 100%;
+                    max-width: 150px;
+                    }
+
+                    .payment-image {
+                    max-width: 48px;
+                    margin-right: 5px;
+                    }
+
+                    .shadow-text {
+                    text-shadow: 0 0 2px rgba(255, 255, 255, .85);
+                    }
+
+                    .shadow-box {
+                    -webkit-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+                    -moz-box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+                    box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+                    }
+
+                    ul.social-list {
+                    min-width: 40px;
+                    height: 40px;
+                    list-style-type: none;
+                    background-color: #fff;
+                    border-radius: 20px;
+                    margin: 0;
+                    width: auto;
+                    display: inline-block;
+                    padding: 0 10px;
+                    }
+
+                    ul.social-list li {
+                    width: 40px;
+                    height: 40px;
+                    margin: 0 5px;
+                    float: left;
+                    line-height: 35px;
+                    color: #74b6e8;
+                    overflow: hidden;
+                    cursor: pointer;
+                    opacity: 0.65;
+                    filter: alpha(opacity=65);
+                    }
+
+                    ul.social-list li:hover {
+                    opacity: 1;
+                    filter: alpha(opacity=100);
+                    }
+
+                    ul.social-list li:hover img {
+                    width: 25px;
+                    }
+
+
+                    .img-td {
+                    width: 160px;
+                    }
+
+                    .cn {
+                    max-width: 100%;
+                    width: 100%;
+                    }
+
+                    .cn div {
+                    float: left;
+                    }
+
+                    .bold {
+                    min-width: 150px;
+                    text-align: left !important;
+                    padding-right: 5px;
+                    font-size: 14px;
+                    font-weight: 700;
+                    }
+
+                    .vl {
+                    text-align: left !important;
+                    padding-bottom: 10px;
+                    }
+
+                    .cnt {
+                    float: right;
+                    }
+
+
+                    .invoice-box table tr.payment-gateway td {
+                    border-bottom: 1px solid #eee;
+                    }
+
+                    .invoice-box table tr.payment-gateway.last td {
+                    border-bottom: none;
+                    }
+
+                    #display-currency {
+                    color: #068914;
+                    }
+
+                    .grand-total {
+                    color: #7d0c0c;
+                    font-weight: bold;
+                    }
+
+                    .selected {
+                    background-color: #e1f0fa;
+                    }
+
+                    .radio-inline {
+                    width: 100%;
+                    display: block;
+                    }
+
+                    .payment-gateway {
+                    font-size: 16px;
+                    color: #000;
+                    }
+
+                    input[type="text"].invoice-value {
+                    width: 100%;
+                    max-width: 100px;
+                    text-align: right;
+                    display: inline-block;
+                    }
+
+                    .payment-gateway label.radio-inline {
+                    padding: 0;
+                    }
+
+
+                    /** RTL **/
+                    .rtl {
+                    direction: rtl;
+                    }
+
+                    .rtl .fix-number {
+                    direction: ltr !important;
+                    text-align: right;
+                    }
+
+
+                    .rtl table tr td.lang {
+                    text-align: right !important;
+                    }
+
+                    .rtl table tr td, .rtl .invoice-value {
+                    text-align: left;
+                    }
+
+                    .rtl .cn div {
+                    float: right;
+                    }
+
+                    .rtl .bold {
+                    text-align: right !important;
+                    }
+
+                    .rtl .vl {
+                    text-align: right !important;
+                    }
+
+                    .rtl .cnt {
+                    float: left;
+                    }
+
+                    @media only screen and (max-width: 750px) {
+                    .invoice-box table tr.top table td {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    padding-bottom: 0;
+                    }
+
+                    .invoice-box table tr.information table td {
+                    width: 100%;
+                    display: block;
+                    text-align: center;
+                    }
+
+                    .unit-price {
+                    display: none;
+                    }
+
+                    .invoice-box table td.padding-table {
+                    padding: 5px;
+                    }
+
+                    .payment-image {
+                    max-width: 32px;
+                    }
+
+                    .col-xs-12 {
+                    padding: 5px;
+                    }
+
+                    .cn {
+                    display: table;
+                    margin: auto;
+                    }
+
+                    .invoice-box table td.cnt, .invoice-box table td.cnd {
+                    padding-top: 0 !important;
+                    padding-bottom: 0 !important;
+                    }
+
+                    .bold {
+                    text-align: right !important;
+                    padding-right: 10px;
+                    }
+
+                    .rtl .bold {
+                    text-align: left !important;
+                    padding-right: 0;
+                    padding-left: 10px;
+                    }
+                    }
+
+                    @media only screen and (max-width: 350px) {
+                    .quantity {
+                    display: none;
+                    }
+
+                    .cn {
+                    max-width: 100%;
+                    }
+
+                    .bold {
+                    width: 100% !important;
+                    clear: both;
+                    text-align: left !important;
+                    }
+
+                    .rtl .bold {
+                    text-align: right !important;
+                    }
+                    }
+
+                    .paid {
+                    -webkit-print-color-adjust: exact;
+                    /*color: #fff !important;
+                    font-weight: bold;
+                    font-size: 24px;
+                    text-align: center !important;
+                    background-color: #0e7e0b;
+                    padding: 15px;
+                    box-sizing: border-box;
+                    border: 1px solid #0e7e0b;*/
+                    }
+
+                    @media print {
+                    @page {
+                    size: A4;
+                    margin: 0cm;
+                    }
+                    .paid {
+                    background: url('/imgs/colors/green.png' ) repeat !important;
+
+                    }
+
+                    .invoice-box table tr.heading td {
+                    background: url('/imgs/colors/grey-dark.png') repeat !important;
+                    color:#ffffff !important;
+                    }
+
+                    .invoice-box table tr.total td
+                    {
+                    border-top: 1px solid #888888;
+                    }
+                    .invoice-box table td.padding-table {
+                    padding: 0px;
+                    }
+                    .invoice-box table tr.heading td {
+                    border-top: 1px solid #888888;
+                    border-bottom: 1px solid #888888;
+                    }
+                    .vendor-logo {
+                    width: 150px;
+                    }
+                    .payment-image {
+                    width: 48px;
+                    }
+                    .img-td {
+                    width:20%;
+                    }
+                    .profile-td {
+                    width:80%;
+                    }
+                    ul.social-list {
+                    display:none;
+                    }
+                    .padding-table {
+                    padding: 5px;
+                    margin-bottom: 0px;
+                    }
+                    .alert {
+                    padding: 10px;
+                    margin-bottom: 0px;
+                    }
+                    .page-content {
+                    padding: 0px;
+                    }
+
+                    a[href]:after {
+                    content: "" !important;
+                    }
+                    .footer .footer-inner .footer-content {
+                    border-top: 0px double #e5e5e5;
+                    }
+
+                    .payment-gateway {
+                    font-size: 12px;
+                    }
+
+                    }
+
+                    .invoice-box td .alert-danger, .invoice-box div .alert-danger {
+                    color: #a94442 !important;
+                    }
+
+                    .invoice-box td .alert-success, .invoice-box div .alert-success {
+                    color: #3c763d !important;
+                    }
+
+                    .paid {
+                    color: #fff !important;
+                    font-weight: bold;
+                    font-size: 24px;
+                    text-align: center !important;
+                    background-color: #0e7e0b;
+                    padding: 15px;
+                    box-sizing: border-box;
+                    border: 1px solid #0e7e0b;
+                    }
+
+                    .form-actions {
+                    margin-bottom: 0 !important;
+                    }
+
+                    .display-curreny {
+                    text-align: center;
+                    margin-top: -20px;
+                    padding-top: 5px;
+                    font-family: inherit;
+                    }
+                </style>
+                <input id="hdnLang" type="hidden" value="en"/>
+                <input id="hdnBtnLoading" type="hidden" value="Loading..."/>
+
+
+                <div id="main-container" class="main-container">
+
+
+                    <div class="main-content">
+                        <div class="main-content-inner">
+                            <div id="page-loading" style="display:none" class="ajax-loading-overlay">
+                                <i class="ajax-loading-icon fa fa-spin fa-spinner fa-2x orange"></i>
+                            </div>
+
+
+                            <div class="page-content">
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        &lt;!&ndash; PAGE CONTENT BEGINS &ndash;&gt;
+
+
+                                        <header>
+                                            <div class="logo">
+                                                <img class="vendor-logo shadow-box img"
+                                                     src="https://demo.MyFatoorah.com//imgs/default-image.jpg"/>
+                                            </div>
+
+                                            <h4 dir="ltr" class="vendorName">MyFatoorah API SandBox</h4>
+
+                                        </header>
+                                        <div class="form-cont">
+
+
+                                            <h4 dir="ltr">100.000KD</h4>
+                                            <div id="loader"></div>
+
+                                            <form class="form-horizontal">
+                                                &lt;!&ndash;<input name="__RequestVerificationToken" type="hidden"
+                                                       value="YOx4UVlmamP7HgyGpopSklaBI9Tu0Vr8qzgq7cdhO4CptJTfzrGu1CwJN0KWA9mbDDkTXi3knbV4hnt-ihQGVYjL8S81"/>
+                                                <input data-val="true"
+                                                       data-val-required="The field Payment ID is mandatory." id="PaymentId"
+                                                       name="PaymentId" type="hidden" value="060660044248802161"/>
+                                                <input id="SessionId" name="SessionId" type="hidden" value=""/>
+                                                <ul id="divErrors" style="display: none" class="alert alert-danger "></ul>
+                                                <div class="form-group hidden">
+                                                    <label class="col-sm-4 control-label" for="PaymentId">Payment ID</label>
+                                                    <div class="col-sm-8 ">
+                                                        <p class="form-control-static">
+                                                            060660044248802161
+                                                        </p>
+                                                    </div>
+                                                </div>&ndash;&gt;
+                                                <div class="form-flds" id="formfildes">
+
+
+                                                    <div class="form-group">
+                                                        <div class="">
+                                                            <input type="text" placeholder="Card Number"
+                                                                   class="inputs"
+                                                                   style="height: 67px; border:1px solid #6fcde0;padding: 10px;"/>
+                                                            <img src="/payment_myfatoora/static/src/img/visa.png"
+                                                                 class="visa"
+                                                                 style="float: right;margin-right: 10px;"/>
+                                                        </div>
+                                                        <label id="CardNumberInvalid" style="display:none"
+                                                               class="text-danger small"></label>
+
+                                                    </div>
+
+
+                                                    <div class="row"
+                                                         style="display: flex;justify-content: space-between;flex-direction: row;">
+                                                        <div>
+                                                            <div class="form-group">
+                                                                <div class="col"
+                                                                     style="display: flex;justify-content: flex-start; flex-direction: column; align-items: flex-start;">
+
+                                                                    <input type="text" id="CardExpiryMonth"
+                                                                           placeholder="Expiry Month (MM)" class="inputs"/>
+                                                                    <label id="CardExpiryMonthInvalid" style="display:none"
+                                                                           class="text-danger small"></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div>
+                                                            <div class="form-group">
+                                                                <div class="col"
+                                                                     style="display: flex;justify-content: flex-end; flex-direction: column; align-items: flex-end;">
+                                                                    <input type="text" id="CardExpiryYear"
+                                                                           placeholder="Expiry Year (YY)" class="inputs"/>
+                                                                    <label id="CardExpiryYearInvalid" style="display:none"
+                                                                           class="text-danger small"></label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <div class="">
+                                                            <input type="text" placeholder="Card Security Code (CVV)"
+                                                                   class="inputs"
+                                                                   style="height: 67px; border:1px solid #6fcde0;padding: 10px;"/>
+                                                            <img src="/payment_myfatoora/static/src/img/cvv.png" class="cvv"
+                                                                 style="float: right;margin-right: 10px;"/>
+                                                            <img class="popup"
+                                                                 src="/payment_myfatoora/static/src/img/cvvinfo.png"/>
+                                                        </div>
+                                                        <label id="CardSecurityCodeInvalid" style="display:none"
+                                                               class="text-danger small"></label>
+                                                    </div>
+                                                </div>
+                                                <input id="btn-submit" class="btn" data-loading-text="Loading..."
+                                                       type="button" onclick="pay()" name="btnSubmit" value="Pay Now"
+                                                       style=" border-radius: 4px; "/>
+                                                <div class="virifed-group">
+                                                    <img src="/payment_myfatoora/static/src/img/pci.png"/>
+                                                    <img src="/payment_myfatoora/static/src/img/vbyv.png"/>
+                                                    <img src="/payment_myfatoora/static/src/img/mcsc.png"/>
+                                                </div>
+                                            </form>
+                                        </div>
+
+
+                                        &lt;!&ndash; PAGE CONTENT ENDS &ndash;&gt;
+                                    </div>&lt;!&ndash; /.col &ndash;&gt;
+                                </div>&lt;!&ndash; /.row &ndash;&gt;
+                            </div>&lt;!&ndash; /.page-content &ndash;&gt;
+
+                        </div>
+                    </div>&lt;!&ndash; /.main-content &ndash;&gt;
+
+                    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+                        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+                    </a>
+                </div>
+
+                <script type="text/javascript">
+                    if (self === top) {
+                    var antiClickjack = document.getElementById("antiClickjack");
+                    antiClickjack.parentNode.removeChild(antiClickjack);
+                    } else {
+                    top.location = self.location;
+                    }
+
+
+                    PaymentSession.configure({
+                    fields: {
+                    // ATTACH HOSTED FIELDS TO YOUR PAYMENT PAGE FOR A CREDIT CARD
+                    card: {
+                    number: "#CardNumber",
+                    securityCode: "#CardSecurityCode",
+                    expiryMonth: "#CardExpiryMonth",
+                    expiryYear: "#CardExpiryYear"
+                    }
+                    },
+                    //SPECIFY YOUR MITIGATION OPTION HERE
+                    frameEmbeddingMitigation: ["javascript"],
+                    callbacks: {
+                    initialized: function (response) {
+                    $("#CardNumber").addClass('form-control');
+                    $("#CardSecurityCode").addClass('form-control');
+                    // HANDLE INITIALIZATION RESPONSE
+                    },
+                    formSessionUpdate: function (response) {
+                    // HANDLE RESPONSE FOR UPDATE SESSION
+                    if (response.status) {
+                    if ("ok" == response.status) {
+
+                    document.getElementById('SessionId').value = response.session.id;
+                    document.getElementById("mpgs-form").submit();
+
+                    } else if ("fields_in_error" == response.status) {
+                    $("#divErrors").html("");
+                    $("#CardNumberInvalid").text("");
+                    $("#CardExpiryYearInvalid").text("");
+                    $("#CardExpiryMonthInvalid").text("");
+                    $("#CardSecurityCodeInvalid").text("");
+
+                    if (response.errors.cardNumber) {
+                    var cardNumberErrorMsg = $("#hdnLang").val() != "ar" ? "Card number invalid or missing." : "رقم البطاقة
+                    غير صحيح أو لم يتم تزويدة.";
+                    $("#CardNumberInvalid").text(cardNumberErrorMsg);
+                    $("#CardNumberInvalid").show();
+                    $("#divErrors").append(cardNumberErrorMsg);
+                    }
+                    if (response.errors.expiryYear) {
+                    var expiryYearErrorMsg = $("#hdnLang").val() != "ar" ? "Expiry year invalid or missing." : "تاريخ إنتهاء
+                    سنة البطاقة غير صحيح أو لم يتم تزويدة.";
+                    $("#CardExpiryYearInvalid").text(expiryYearErrorMsg);
+                    $("#CardExpiryYearInvalid").show();
+                    $("#divErrors").append(expiryYearErrorMsg);
+                    }
+                    if (response.errors.expiryMonth) {
+                    var expiryMonthErrorMsg = $("#hdnLang").val() != "ar" ? "Expiry month invalid or missing." : "تاريخ
+                    إنتهاء شهر البطاقة غير صحيح أو لم يتم تزويدة.";
+                    $("#CardExpiryMonthInvalid").text(expiryMonthErrorMsg);
+                    $("#CardExpiryMonthInvalid").show();
+                    $("#divErrors").append(expiryMonthErrorMsg);
+                    }
+                    if (response.errors.securityCode) {
+                    var secritycodeErrorMsg = $("#hdnLang").val() != "ar" ? "Security code invalid." : "الرقم السري غير
+                    صحيح."
+                    $("#CardSecurityCodeInvalid").text(secritycodeErrorMsg);
+                    $("#CardSecurityCodeInvalid").show();
+                    $("#divErrors").append(secritycodeErrorMsg);
+
+                    }
+                    //$("#divErrors").show();
+                    $("#btn-submit").button("reset");
+                    } else if ("request_timeout" == response.status) {
+
+                    $("#divErrors").append($("#hdnLang").val() != "ar" ? "<li>Session update failed with request timeout: "
+                    + response.errors.message + "</li>" : "<li>خطأ في تحديث الجلسة بسبب انتهاء الوقت: " +
+                    response.errors.message + "</li>");
+                    $("#divErrors").show();
+                    $("#btn-submit").button("reset");
+                    } else if ("system_error" == response.status) {
+
+                    $("#divErrors").append($("#hdnLang").val() != "ar" ? "<li>Session update failed with system error: " +
+                    response.errors.message + "</li>" : "<li>خطأ في النظام في تحديث الجلسة: " + response.errors.message +
+                    "</li>");
+                    $("#divErrors").show();
+                    $("#btn-submit").button("reset");
+                    }
+                    } else {
+
+                    $("#divErrors").append($("#hdnLang").val() != "ar" ? "<li>Session update failed: " + response + "</li>"
+                    : "<li>خطأ في تحديث الجلسة: " + response + "</li>");
+                    $("#divErrors").show();
+                    $("#btn-submit").button("reset");
+                    }
+                    }
+                    }
+                    });
+
+
+                    PaymentSession.setFocus('card.number');
+
+                    //PaymentSession.setFocusStyle(["card.number", "card.securityCode"], {
+                    // borderColor: '#66afe9',
+                    // borderWidth: '1px'
+                    //});
+
+                    //PaymentSession.setHoverStyle(["card.number", "card.securityCode"], {
+                    // borderColor: '#66afe9',
+                    // borderWidth: '1px'
+                    //});
+
+                    function pay() {
+                    // UPDATE THE SESSION WITH THE INPUT FROM HOSTED FIELDS
+                    $("#divErrors").html("");
+                    $("#divErrors").hide();
+                    $("#btn-submit").button("loading");
+                    PaymentSession.updateSessionFromForm('card');
+
+                    }
+
+                </script>
+
+                <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.eu01.nr-data.net","errorBeacon":"bam.eu01.nr-data.net","licenseKey":"6295bf29bb","applicationID":"11322621","transactionName":"MhBSZQoZD0EDARYNVwtafWc7VzFTGysMElcMFlVyFxYVQA0ODgFKSjhAVgs=","queueTime":0,"applicationTime":5,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"6295bf29bb",applicationID:"11322621"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(7),c=e(8),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(9);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e){return!(!e||!e.protocol||"file:"===e.protocol)}t.exports=r},{}],4:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(6),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,w=["click","keydown","mousedown","pointerdown","touchstart"];w.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],5:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],6:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],7:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],8:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],9:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?u(e,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){e&&a&&e(n,r,i);for(var c=t(i),f=v(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[h[n]];return p&&p.push([b,n,r,c]),c}}function o(e,t){y[e]=v(e).concat(t)}function m(e,t){var n=y[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return y[e]||[]}function g(e){return p[e]=p[e]||i(n)}function w(e,t){s(e,function(e,n){t=t||"feature",h[n]=t,t in d||(d[t]=[])})}var y={},h={},b={on:o,addEventListener:o,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:w,abort:c,aborted:!1};return b}function o(e){return u(e,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=e("gos"),s=e(7),d={},p={},l=t.exports=i();t.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=x.info=NREUM.info,t=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+x.offset],null,"api"),c("timing",["load",n]);var r=l.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+x.offset],null,"api")}var a=e(2),c=e("handle"),f=e(7),u=e("ee"),s=e(5),d=e(3),p=window,l=p.document,m="addEventListener",v="attachEvent",g=p.XMLHttpRequest,w=g&&g.prototype;if(d(p.location)){NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:g,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1208.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:b,userAgent:s};e(1),e(4),l[m]?(l[m]("DOMContentLoaded",o,!1),p[m]("load",r,!1)):(l[v]("onreadystatechange",i),p[v]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0}},{}],"wrap-function":[function(e,t,n){function r(e,t){function n(t,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],e)}c(n+"start",[o,a,f],s,u);try{return p=t.apply(a,o)}catch(m){throw c(n+"err",[o,a,m],s,u),m}finally{c(n+"end",[o,a,p],s,u)}}return a(t)?t:(n||(n=""),nrWrapper[p]=t,o(t,nrWrapper,e),nrWrapper)}function r(e,t,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<t.length;u++)f=t[u],c=e[f],a(c)||(e[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!m||t){var c=m;m=!0;try{e.emit(n,r,o,t,a)}catch(f){i([f,n,r,o],e)}m=c}}return e||(e=s),n.inPlace=r,n.flag=p,n}function i(e,t){t||(t=s);try{t.emit("internal-error",e)}catch(n){}}function o(e,t,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(e);return r.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(o){i([o],n)}for(var a in e)l.call(e,a)&&(t[a]=e[a]);return t}function a(e){return!(e&&e instanceof Function&&e.apply&&!e[p])}function c(e,t){var n=t(e);return n[p]=e,o(e,n,s),n}function f(e,t,n){var r=e[t];e[t]=c(r,n)}function u(){for(var e=arguments.length,t=new Array(e),n=0;n<e;++n)t[n]=arguments[n];return t}var s=e("ee"),d=e(8),p="nr@original",l=Object.prototype.hasOwnProperty,m=!1;t.exports=r,t.exports.wrapFunction=c,t.exports.wrapInPlace=f,t.exports.argsToArray=u},{}]},{},["loader"]);</script>
+            </html>
+            </template>
+        </data>-->
+</odoo>

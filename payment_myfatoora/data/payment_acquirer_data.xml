@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="payment_acquirer_myfatoora" model="payment.acquirer">
+            <field name="name">MyFatoorah</field>
+            <field name="image_128" type="base64" file="payment_myfatoora/static/src/img/logo.png"/>
+            <field name="provider">myfatoora</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="redirect_form_view_id" ref="payment_myfatoora.myfatoora_form"/>
+        </record>
+
+        <record id="payment_method_myfatoorah" model="account.payment.method">
+        <field name="name">MyFatoorah</field>
+        <field name="code">myfatoora</field>
+        <field name="payment_type">inbound</field>
+    </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="myfatoora_card">
+            <link rel="stylesheet" href="/payment_myfatoora/static/src/css/bootstrap.min.css"/>
+            <script src="/payment_myfatoora/static/src/js/bootstrap.min.js"></script>
+            <style>
+                input {
+                background: none;
+                border: none;
+                border-bottom: 1px solid #cccccc54;
+                padding: 12px 0;
+                margin-top: 10px;
+                color: #8a8989;
+                }
+                select {
+                background: none;
+                border: none;
+                border-bottom: 1px solid #cccccc54;
+                padding: 12px 0;
+                margin-top: 10px;
+                color: #8a8989;
+                }
+                input:focus-visible {
+                outline: none !important;
+                }
+                labal {
+                color: #515151 !important;
+                }
+                .card.p-5 {
+                border: none;
+                box-shadow: 0 0 18px 0 #f2f1f1;
+                border-radius: 20px;
+                }
+                .btn_rec {
+                display: block;
+                margin: auto;
+                background: #62bcea;
+                padding: 19px 46px;
+                border-radius: 9px;
+                box-shadow: 0 4px 2px 0 #62bcea4f;
+                color: #fff;
+                }
+                .card.card_selections {
+                padding: 20px;
+                border: none;
+                background: #62bcea;
+                color: #fff !important;
+                }
+                .card.card_selections {
+                padding: 20px;
+                border: none;
+                background: #62bcea;
+                color: #fff !important;
+                }
+                .card.card_selections select {
+                color: #fff;
+                border-color: #fff;
+                border-bottom-color: rgb(255, 255, 255);
+                border-bottom: 2px solid;
+                background-color: #62bcea !important;
+                }
+            </style>
+            <div class="backgrounds">
+                <div class="container">
+                    <div class="pt-5">
+                        <div class="card p-5">
+                            <h1 class="text-center pb-3 mb-4"
+                                style="font-weight: bolder;text-transform: uppercase;border-bottom: 1px solid #cccccc85;">
+                                My Fatoorah
+                            </h1>
+                            <form class="" action="/myfatoora/process" method="post"
+                                  enctype="multipart/form-data">
+                                <div class="row">
+                                    <dv class="col-md-4 mt-4">
+                                        <labal>CustomerName</labal>
+                                        <input type="text" name="CustomerName" class="w-100" t-att-value="CustomerName"
+                                               readonly="1"/>
+                                    </dv>
+                                    <dv class="col-md-4 mt-4">
+                                        <labal>InvoiceValue</labal>
+
+                                        <input type="text" name="InvoiceValue" class="w-100" t-att-value="InvoiceValue"
+                                               readonly="1"/>
+                                    </dv>
+                                    <dv class="col-md-4 mt-4">
+                                        <labal>CustomerBlock</labal>
+
+                                        <input type="text" name="CustomerBlock" class="w-100"
+                                               t-att-value="CustomerBlock"
+                                               readonly="1"/>
+                                    </dv>
+                                    <div class="col-md-4 mt-4">
+                                        <labal>CustomerStreet</labal>
+
+                                        <input type="text" name="CustomerStreet" class="w-100"
+                                               t-att-value="CustomerStreet"
+                                               readonly="1"/>
+                                    </div>
+                                    <div class="col-md-4 mt-4">
+
+                                        <labal>CustomerHouseBuildingNo</labal>
+
+                                        <input type="text" name="CustomerHouseBuildingNo" class="w-100"
+                                               t-att-value="CustomerHouseBuildingNo"
+                                               readonly="1"/>
+                                    </div>
+                                    <div class="col-md-4 mt-4">
+                                        <labal>CustomerCivilId</labal>
+
+                                        <input type="text" name="CustomerCivilId" class="w-100"
+                                               t-att-value="CustomerCivilId"
+                                               readonly="1"/>
+                                    </div>
+                                    <div class="col-md-4 mt-4">
+                                        <labal>CustomerAddress</labal>
+
+                                        <input type="text" name="CustomerAddress" class="w-100"
+                                               t-att-value="CustomerAddress"
+                                               readonly="1"/>
+                                    </div>
+                                    <div class="col-md-4 mt-4">
+                                        <labal>CustomerReference</labal>
+
+                                        <input type="text" name="CustomerReference" class="w-100"
+                                               t-att-value="CustomerReference"
+                                               readonly="1"/>
+                                    </div>
+                                    <div class="col-md-4 mt-4">
+                                        <labal>CountryCodeId</labal>
+
+                                        <input type="text" name="CountryCodeId" class="w-100"
+                                               t-att-value="CountryCodeId"
+                                               readonly="1"/>
+                                    </div>
+                                    <div class="col-md-4 mt-4">
+                                        <labal>CustomerMobile</labal>
+
+                                        <input type="text" name="CustomerMobile" class="w-100"
+                                               t-att-value="CustomerMobile"
+                                               readonly="1"/>
+                                    </div>
+                                    <div class="col-md-4 mt-4">
+                                        <labal>CustomerEmail</labal>
+                                        <input type="text" name="CustomerEmail" class="w-100"
+                                               t-att-value="CustomerEmail"
+                                               readonly="1"/>
+                                    </div>
+                                    <div class="col-md-4 mt-4">
+                                        <labal>DisplayCurrencyId</labal>
+
+                                        <input type="text" name="DisplayCurrencyId" class="w-100"
+                                               t-att-value="DisplayCurrencyId"
+                                               readonly="1"/>
+                                    </div>
+                                    <div class="col-md-4 mt-4">
+                                        <input type="hidden" name="SendInvoiceOption" class="w-100"
+                                               t-att-value="SendInvoiceOption"
+                                               invisible="1"/>
+                                    </div>
+                                    <div class="col-md-12 mt-4">
+                                        <div class="card card_selections">
+                                            Payment Methods
+                                            <select name="PaymentMethodId" class="w-100">
+                                                <t t-foreach="payment_methods" t-as="method">
+                                                    <option t-att-value="method['PaymentMethodId']">
+                                                        <t t-esc="method['PaymentMethodEn']"/>
+
+                                                    </option>
+                                                </t>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mt-4">
+                                        <input type="hidden" name="CallBackUrl" class="w-100" t-att-value="CallBackUrl"
+                                               invisible="1"/>
+                                    </div>
+                                    <div class="col-md-6 mt-4">
+                                        <input type="hidden" name="Environment" class="w-100" t-att-value="Environment"
+                                               invisible="1"/>
+                                    </div>
+                                    <div class="col-md-6 mt-4">
+                                        <input type="hidden" name="ErrorUrl" class="w-100" t-att-value="ErrorUrl"
+                                               invisible="1"/>
+                                    </div>
+                                </div>
+                                <input type="submit" class="btn_rec" placeholder="View More"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,224 @@
+<odoo>
+    <data>
+        <template id="error_page">
+            <link rel="stylesheet" href="/payment_myfatoora/static/src/css/bootstrap.min.css"/>
+            <script src="/payment_myfatoora/static/src/js/bootstrap.min.js"></script>
+            <style>
+                .main.text-center img {
+                width: 100px;
+                }
+                .main h1 {
+                font-size: 57px;
+                font-weight: bold;
+                }
+                .warning {
+                padding: 8px 43px;
+                background: none;
+                border: 1px solid #00b7ff;
+                color: #00b7ff;
+                font-weight: bold;
+                }
+            </style>
+            <form class="" action="/myfatoora/return/shop" method="post"
+                  enctype="multipart/form-data">
+                <div class="container h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-md-12 mx-auto">
+                            <div class="main text-center">
+                                <img src="/payment_myfatoora/static/src/img/warning.png" class="d-block mx-auto"/>
+                                <h3>Transaction Failed</h3>
+                                <div>
+                                    <span>Transaction Status:
+                                        <t t-esc="TransactionStatus" t-att-value="TransactionStatus"/>
+                                    </span>
+                                    <br></br>
+                                    <span>Error:
+                                        <t t-esc="Error" t-att-value="Error"/>
+                                    </span>
+                                </div>
+                                <br></br>
+                                <br></br>
+                                <button class="warning">Go To Shop</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </template>
+        <template id="error_page_currency">
+            <link rel="stylesheet" href="/payment_myfatoora/static/src/css/bootstrap.min.css"/>
+            <script src="/payment_myfatoora/static/src/js/bootstrap.min.js"></script>
+            <style>
+                .main.text-center img {
+                width: 100px;
+                }
+                .main h1 {
+                font-size: 57px;
+                font-weight: bold;
+                }
+                .warning {
+                padding: 8px 43px;
+                background: none;
+                border: 1px solid #00b7ff;
+                color: #00b7ff;
+                font-weight: bold;
+                }
+            </style>
+            <form class="" action="/myfatoora/return/shop" method="post"
+                  enctype="multipart/form-data">
+                <div class="container h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-md-12 mx-auto">
+                            <div class="main text-center">
+                                <img src="/payment_myfatoora/static/src/img/warning.png" class="d-block mx-auto"/>
+                                <h3>Transaction Failed</h3>
+                                <div>
+                                    <span>Please Activate The Currency:
+                                        <t t-esc="Currency" t-att-value="Currency"/>
+                                    </span>
+                                    <!--                                    <br></br>-->
+                                    <!--                                    <span>Error:-->
+                                    <!--                                        <t t-esc="Error" t-att-value="Error"/>-->
+                                    <!--                                    </span>-->
+                                </div>
+                                <br></br>
+                                <br></br>
+                                <button class="warning">Go To Shop</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </template>
+        <template id="error_page_currency_validation">
+            <link rel="stylesheet" href="/payment_myfatoora/static/src/css/bootstrap.min.css"/>
+            <script src="/payment_myfatoora/static/src/js/bootstrap.min.js"></script>
+            <style>
+                .main.text-center img {
+                width: 100px;
+                }
+                .main h1 {
+                font-size: 57px;
+                font-weight: bold;
+                }
+                .warning {
+                padding: 8px 43px;
+                background: none;
+                border: 1px solid #00b7ff;
+                color: #00b7ff;
+                font-weight: bold;
+                }
+            </style>
+            <form class="" action="/myfatoora/return/shop" method="post"
+                  enctype="multipart/form-data">
+                <div class="container h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-md-12 mx-auto">
+                            <div class="main text-center">
+                                <img src="/payment_myfatoora/static/src/img/warning.png" class="d-block mx-auto"/>
+                                <h3>Transaction Failed</h3>
+                                <div>
+                                    Transaction failed due to following reason.
+                                    <br></br>
+                                    <br></br>
+                                    <span>
+                                        <t t-esc="Error" t-att-value="error"/>
+                                    </span>
+                                </div>
+                                <br></br>
+                                <br></br>
+                                <button class="warning">Go To Shop</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </template>
+        <template id="initiate_payment">
+            <link rel="stylesheet" href="/payment_myfatoora/static/src/css/bootstrap.min.css"/>
+            <script src="/payment_myfatoora/static/src/js/bootstrap.min.js"></script>
+            <style>
+                .main.text-center img {
+                width: 100px;
+                }
+                .main h1 {
+                font-size: 57px;
+                font-weight: bold;
+                }
+                .warning {
+                padding: 8px 43px;
+                background: none;
+                border: 1px solid #00b7ff;
+                color: #00b7ff;
+                font-weight: bold;
+                }
+            </style>
+            <form class="" action="/myfatoora/return/shop" method="post"
+                  enctype="multipart/form-data">
+                <div class="container h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-md-12 mx-auto">
+                            <div class="main text-center">
+                                <img src="/payment_myfatoora/static/src/img/warning.png" class="d-block mx-auto"/>
+                                <h3>Transaction Failed</h3>
+                                <div>
+                                    Transaction failed due to following reason.
+                                    <br></br>
+                                    <br></br>
+                                    <span>
+                                        <t t-esc="error" t-att-value="error"/>
+                                    </span>
+                                </div>
+                                <br></br>
+                                <br></br>
+                                <button class="warning">Go To Shop</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </template>
+        <template id="wrong_configuration">
+            <link rel="stylesheet" href="/payment_myfatoora/static/src/css/bootstrap.min.css"/>
+            <script src="/payment_myfatoora/static/src/js/bootstrap.min.js"></script>
+            <style>
+                .main.text-center img {
+                width: 100px;
+                }
+                .main h1 {
+                font-size: 57px;
+                font-weight: bold;
+                }
+                .warning {
+                padding: 8px 43px;
+                background: none;
+                border: 1px solid #00b7ff;
+                color: #00b7ff;
+                font-weight: bold;
+                }
+            </style>
+            <form class="" action="/myfatoora/return/shop" method="post"
+                  enctype="multipart/form-data">
+                <div class="container h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-md-12 mx-auto">
+                            <div class="main text-center">
+                                <img src="/payment_myfatoora/static/src/img/warning.png" class="d-block mx-auto"/>
+                                <h3>Wrong Configuration</h3>
+                                <div>
+                                    This may due to wrong token configuration accroding to the enviornment
+                                    <br></br>
+                                    <br></br>
+
+                                </div>
+                                <br></br>
+                                <br></br>
+                                <button class="warning">Go To Shop</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </template>
+    </data>
+</odoo>
